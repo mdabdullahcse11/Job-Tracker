@@ -10,8 +10,8 @@
 
     <style type="text/tailwindcss">
       @theme {
-        --font-syne: "Syne", sans-serif;
-        --font-dm: "DM Sans", sans-serif;
+        --font-syne:  sans-serif;
+        --font-dm:  sans-serif;
         --color-navy: #1d3557; 
         --color-teal: #2a9d8f;
         --color-coral: #e76f51;
@@ -50,22 +50,22 @@
       <main class="px-5 pb-10 lg:px-10 overflow-y-auto">
         <!-- Stats Cards -->
         <div class="flex flex-wrap gap-4 mb-6">
-          <div class="flex-1 min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm">
+          <div class="flex-1 min-w-28 bg-white rounded-md px-6 py-5 shadow-sm">
             <p class="text-xs text-slate-500 mb-1">Total</p>
             <p class="font-syne text-4xl font-extrabold text-navy" id="stat-total">0</p>
           </div>
-          <div class="flex-1 min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm">
+          <div class="flex-1 min-w-28 bg-white rounded-md px-6 py-5 shadow-sm">
             <p class="text-xs text-slate-500 mb-1">Interview</p>
             <p class="font-syne text-4xl font-extrabold text-teal" id="stat-interview">0</p>
           </div>
-          <div class="flex-1 min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm">
+          <div class="flex-1 min-w-28 bg-white rounded-md px-6 py-5 shadow-sm">
             <p class="text-xs text-slate-500 mb-1">Rejected</p>
             <p class="font-syne text-4xl font-extrabold text-coral" id="stat-reject">0</p>
           </div>
         </div>
 
         <!-- Divider -->
-        <hr class="border-slate-200 mb-6" />
+        <hr class="border-slate-200 mb-6 shadow-transparent" />
 
         <!-- Section Header -->
         <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
@@ -77,20 +77,20 @@
         <div class="flex flex-wrap gap-2 mb-5">
           <button id="tab-all"
           onclick="switchTab ('all')"
-            class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200"
+            class="px-5 py-1.5 rounded-md border-2 text-sm font-medium cursor-pointer transition-all duration-200"
           >
             All
           </button>
           <button id="tab-interview"
           onclick="switchTab('interview')"
-            class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200"
+            class="px-5 py-1.5 rounded-md border-2 text-sm font-medium cursor-pointer transition-all duration-200"
           >
             Interview
           </button>
           
           <button id="tab-rejected"
            onclick="switchTab('rejected')"
-            class="px-5 py-1.5 rounded-full border-2 text-sm font-medium cursor-pointer transition-all duration-200">
+            class="px-5 py-1.5 rounded-md border-2 text-sm font-medium cursor-pointer transition-all duration-200">
             Rejected
           </button>
         </div>
@@ -100,8 +100,10 @@
           <section id="all-container" 
           class="hidden flex flex-col gap-2">
 
+<!-- card-1 -->
+
             <div
-              class="card bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+              class="card bg-white rounded-1xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
             >
               <div class="flex justify-between items-start gap-4">
                 <div class="flex-1 min-w-0">
@@ -115,7 +117,7 @@
                     <span>$130,000 - $175,000</span>
                   </p>
                   <div
-                    class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-slate-200 text-slate-500 status"
+                    class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-md bg-slate-200 text-slate-500 status"
                   >
                     Not Applied
                   </div>
@@ -145,9 +147,132 @@
               </div>
             </div>
 
+<!-- card -2 -->
+            <div
+              class="card bg-white rounded-1xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+            >
+              <div class="flex justify-between items-start gap-4">
+                <div class="flex-1 min-w-0">
+                  <p class="font-syne font-bold text-navy text-base mb-0.5">WebFlow Agency</p>
+                  <p class="text-sm text-slate-500 mb-1.5">Web Designer & Developer</p>
+                  <p class="text-xs text-slate-400 mb-3">
+                    <span>Los Angeles, CA • Part-time • $80,000 - $120,000</span>
+                    <span class="mx-1.5 text-slate-300">·</span>
+                  </p>
+                  <div
+                    class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-md bg-slate-200 text-slate-500 status"
+                  >
+                    Not Applied
+                  </div>
+                  <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                    Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white interview "
+                    >
+                      Interview
+                    </button>
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white rejected"
+                    >
+                      Rejected
+                    </button>
+                  </div>
+                </div>
 
+                <button
+                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full delete "
+                >
+                  <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
+                </button>
+              </div>
+            </div>
+
+<!-- card-3 -->
+             <div
+              class="card bg-white rounded-1xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+            >
+              <div class="flex justify-between items-start gap-4">
+                <div class="flex-1 min-w-0">
+                  <p class="font-syne font-bold text-navy text-base mb-0.5">DataViz Solutions</p>
+                  <p class="text-sm text-slate-500 mb-1.5">Data Visualization Specialist</p>
+                  <p class="text-xs text-slate-400 mb-3">
+                    <span>Boston, MA  •Full-time• $125,000 - $165,000</span>
+                    <span class="mx-1.5 text-slate-300">·</span>
+                  </p>
+                  <div
+                    class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-md bg-slate-200 text-slate-500 status"
+                  >
+                    Not Applied
+                  </div>
+                  <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                  Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white interview "
+                    >
+                      Interview
+                    </button>
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white rejected"
+                    >
+                      Rejected
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full delete "
+                >
+                  <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
+                </button>
+              </div>
+            </div>
+
+<!-- card-4 -->
+             <div
+              class="card bg-white rounded-1xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp"
+            >
+              <div class="flex justify-between items-start gap-4">
+                <div class="flex-1 min-w-0">
+                  <p class="font-syne font-bold text-navy text-base mb-0.5">CloudFirst Inc</p>
+                  <p class="text-sm text-slate-500 mb-1.5">Backend Developer</p>
+                  <p class="text-xs text-slate-400 mb-3">
+                    <span>Seattle, WA • Full-time• $140,000 - $190,000</span>
+                    <span class="mx-1.5 text-slate-300">·</span>
+                  </p>
+                  <div
+                    class="mb-3 inline-block text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-md bg-slate-200 text-slate-500 status"
+                  >
+                    Not Applied
+                  </div>
+                  <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                    Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-teal text-teal bg-transparent cursor-pointer transition-all duration-150 hover:bg-teal hover:text-white interview "
+                    >
+                      Interview
+                    </button>
+                    <button
+                      class="text-xs font-semibold px-4 py-1.5 rounded-md border-2 border-coral text-coral bg-transparent cursor-pointer transition-all duration-150 hover:bg-coral hover:text-white rejected"
+                    >
+                      Rejected
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  class="text-slate-300 hover:text-red-400 transition-colors duration-150 py-2 px-3 cursor-pointer shrink-0 bg-red-300 rounded-full delete "
+                >
+                  <i class="fa-regular fa-trash-can text-black pointer-events-none"></i>
+                </button>
+              </div>
+            </div>
           </section>
-
 
           <section class="hidden flex flex-col gap-2" id="interview-container"></section>
 

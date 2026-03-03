@@ -13,8 +13,6 @@ const emptyStat = document.getElementById("emptyStat")
 
 
 function switchTab (tab){
- 
-
     const tabs = [ "all","interview", "rejected" ];
     currentTab = tab;
     for (const t of tabs ) {
@@ -72,13 +70,10 @@ const availableStat = document.getElementById("available")
 
 
 switchTab (currentTab);
-
 document.getElementById("jobs-container").addEventListener('click', function (event){
 
 const clickedElement = event.target;
 const card = clickedElement.closest(".card");
-if(!card) return;
-
 const parent = card.parentNode;
 const status = card.querySelector(".status");
 
@@ -94,11 +89,11 @@ if(clickedElement.classList.contains("rejected")){
 
 if(clickedElement.classList.contains("delete")){
     parent.removeChild(card);
+    
 }
-
 updateStat(); 
-
 });
+
 
 function updateStat () {
 
