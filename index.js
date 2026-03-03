@@ -47,4 +47,38 @@ function switchTab (tab){
 
     
 } 
+
+// update stat count
+const totalStat  = document.getElementById("stat-total");
+const interviewStat  = document.getElementById("stat-interview");
+const rejectStat  = document.getElementById("stat-reject");
+
+
+
+
 switchTab (currentTab);
+
+document.getElementById("jobs-container").addEventListener('click', function (event){
+const clickedElement = event.target;
+
+const card = clickedElement.closest(".card");
+const parent = card.parentNode
+const status = card.querySelector(".status");
+
+
+
+if(clickedElement.classList.contains("interview")){
+    status.innerText = "Interviewed"
+ interviewContainer.appendChild(card)
+}
+
+if(clickedElement.classList.contains("rejected")){
+     status.innerText = "Rejected"
+  rejectContainer.appendChild(card)
+}
+
+if(clickedElement.classList.contains("delete")){
+parent.removeChild(card);
+}
+});
+
